@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+
+    <meta name="description" content="Repositório para demonstrar uso de action para Deploys Automáticos no Heroku">
+    <meta name="author" content="Victor Augusto">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Olá!
+                </h2>
+                <p>
+                    Este site representa o resultado de um deploy automático no Heroku usando Github Action.
+                </p>
+                <p>
+                    O link para o repositório se encontra <a target="_blank"
+                                                             href="https://github.com/victoraugusto6/action-heroku-deploy">aqui</a>.
+                </p>
+                <p><strong>Acesse:</strong></p>
+                <p>
+                    <a class="btn btn-primary btn-large" target="_blank"
+                       href="https://www.linkedin.com/in/victor-augusto-oliveira/">LinkedIn</a>
+                    <a class="btn btn-primary btn-large" target="_blank"
+                       href="https://github.com/victoraugusto6">Github</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
