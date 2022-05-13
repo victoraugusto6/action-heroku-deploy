@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  database:
+    container_name: database-action
+    image: postgres
+    restart: always
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=action-heroku
+      - POSTGRES_USER=action-heroku
+    ports:
+      - 5432:5432
