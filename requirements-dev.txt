@@ -27,6 +27,10 @@ botocore==1.25.13 \
     #   -r requirements.txt
     #   boto3
     #   s3transfer
+collectfast==2.2.0 \
+    --hash=sha256:2f6abc8cab7ec5114a7a9a3660ab629ec142556957220aa82857dc9b4381490d \
+    --hash=sha256:e716b2234ab50b5f1010b0d78c3fae8c6aebdb8b7c66ef5568503c33c1a5e19a
+    # via -r requirements.txt
 dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
@@ -36,6 +40,7 @@ django==4.0.4 \
     --hash=sha256:4e8177858524417563cc0430f29ea249946d831eacb0068a1455686587df40b5
     # via
     #   -r requirements.txt
+    #   collectfast
     #   django-storages
 django-s3-folder-storage==0.5 \
     --hash=sha256:eb5fd3994726f5b87ddc0ea1a6f1af3f598f9d743127c27d6dae111d18a79abe
@@ -45,11 +50,16 @@ django-storages==1.12.3 \
     --hash=sha256:a475edb2f0f04c4f7e548919a751ecd50117270833956ed5bd585c0575d2a5e7
     # via
     #   -r requirements.txt
+    #   collectfast
     #   django-s3-folder-storage
 flake8==4.0.1 \
     --hash=sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d \
     --hash=sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d
     # via -r requirements-dev.in
+gunicorn==20.1.0 \
+    --hash=sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e \
+    --hash=sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8
+    # via -r requirements.txt
 iniconfig==1.1.1 \
     --hash=sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3 \
     --hash=sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32
@@ -187,9 +197,19 @@ tomli==2.0.1 \
     --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
     --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
     # via pytest
+typing-extensions==4.2.0 \
+    --hash=sha256:6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708 \
+    --hash=sha256:f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376
+    # via
+    #   -r requirements.txt
+    #   collectfast
 urllib3==1.26.9 \
     --hash=sha256:44ece4d53fb1706f667c9bd1c648f5469a2ec925fcf3a776667042d645472c14 \
     --hash=sha256:aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e
     # via
     #   -r requirements.txt
     #   botocore
+
+# WARNING: The following packages were not pinned, but pip requires them to be
+# pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
+# setuptools
